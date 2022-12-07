@@ -1,0 +1,131 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8001084516528578850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be9da918cddc58545a8509af289ae6c3, type: 3}
+  m_Name: Eat
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 0646f3b56de81ef41966e58e80de5956
+  position: {x: -150, y: 465}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+  description: 
+  drawGizmos: 0
+--- !u!114 &-5865684288369722764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 844b8cf7feb74b94a9ed8340947707b5, type: 3}
+  m_Name: CheckFood
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 7b67e4c7a69d856439fee92599dec958
+  position: {x: 0, y: 258.03726}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: -8001084516528578850}
+  - {fileID: -4874485206145024733}
+--- !u!114 &-4874485206145024733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 349ec5056eab3484ead6136cc36e4f77, type: 3}
+  m_Name: Chase
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: b226454d277f09246823560996aa446f
+  position: {x: 96.00003, y: 464.71997}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+  description: 
+  drawGizmos: 0
+--- !u!114 &-2954428077616448697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb5496e8cd973748a10b3e3ef436ebd, type: 3}
+  m_Name: Repeat
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: f2f66c3d0912b104aa334cd28c3234a8
+  position: {x: 0, y: 119}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+  description: 
+  drawGizmos: 0
+  child: {fileID: -5865684288369722764}
+  restartOnSuccess: 1
+  restartOnFailure: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d285eb63c2cdd74180de7cfceaa96ad, type: 3}
+  m_Name: Player2Behaciour
+  m_EditorClassIdentifier: 
+  rootNode: {fileID: 6342036997654475863}
+  treeState: 0
+  nodes:
+  - {fileID: 6342036997654475863}
+  - {fileID: -4874485206145024733}
+  - {fileID: -2954428077616448697}
+  - {fileID: -8001084516528578850}
+  - {fileID: -5865684288369722764}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &6342036997654475863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 163c147d123e4a945b688eddc64e3ea5, type: 3}
+  m_Name: RootNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 16e7c525dff9a29478b4cbb46dba896a
+  position: {x: 0, y: 0}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+  description: 
+  drawGizmos: 0
+  child: {fileID: -2954428077616448697}
